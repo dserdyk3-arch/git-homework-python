@@ -1,25 +1,28 @@
-def add(a, b):
-    """Функция сложения двух чисел"""
-    return a + b
+"""Расширенный калькулятор с дополнительными функциями"""
 
-def subtract(a, b):
-    """Функция вычитания двух чисел"""
-    return a - b
+def power(base, exponent):
+    """Возведение в степень"""
+    return base ** exponent
 
-def multiply(a, b):
-    """Функция умножения двух чисел"""
-    return a * b
+def factorial(n):
+    """Вычисление факториала"""
+    if n < 0:
+        return "Ошибка: факториал отрицательного числа!"
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
 
-def divide(a, b):
-    """Функция деления двух чисел"""
-    if b == 0:
-        return "Ошибка: деление на ноль!"
-    return a / b
+def square_root(n):
+    """Квадратный корень"""
+    if n < 0:
+        return "Ошибка: корень из отрицательного числа!"
+    return n ** 0.5
 
-# Пример использования
 if __name__ == "__main__":
-    print("Простой калькулятор")
-    print(f"5 + 3 = {add(5, 3)}")
-    print(f"5 - 3 = {subtract(5, 3)}")
-    print(f"5 * 3 = {multiply(5, 3)}")
-    print(f"5 / 3 = {divide(5, 3)}")
+    print("Расширенный калькулятор")
+    print(f"2^10 = {power(2, 10)}")
+    print(f"5! = {factorial(5)}")
+    print(f"√16 = {square_root(16)}")
